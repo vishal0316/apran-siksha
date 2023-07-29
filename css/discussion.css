@@ -1,11 +1,17 @@
 .discussion {
     margin-top: 12rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
-    padding: 30px 20px;
+    margin-left: 2rem; /* Reduce the left margin for smaller screens */
+    margin-right: 2rem; /* Reduce the right margin for smaller screens */
+    padding: 20px; /* Reduce the padding for smaller screens */
    
     border-radius: 8px;
     background: var(--color-bg2);
+
+     /* Use a media query to adjust the width and margin on smaller screens */
+  @media only screen and (max-width: 768px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
     
 }
 
@@ -34,6 +40,14 @@
     font-size: 16px;
     color: #101010;
     margin: 48px 48px 48px 48px;
+
+   /* Use a media query to adjust the margin and padding on smaller screens */
+   @media only screen and (max-width: 768px) {
+    margin: 24px 24px 24px 24px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   }
   
   /* Styles for the text input */
@@ -77,6 +91,10 @@
     margin: 3rem;
     background: var(--color-bg1);
     border-radius: 1rem;
+    @media only screen and (max-width: 768px) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
   }
  
   .discussion__wrapper .user {
@@ -118,10 +136,12 @@
  .discussion .delete {
     color: red;
     cursor: pointer;
+    font-size: 16px;
  }
 
  .discussion .reply {
   cursor: pointer;
+  font-size: 16px;
  }
 
 /* Styles for the upvote button */
@@ -168,3 +188,15 @@
   background-color: #0056b3; /* Darker blue on hover, you can change it as desired */
 }
 
+/* Styles for the upvote button */
+.upvote-btn,
+.downvote-btn,
+.view-discussion-btn {
+  /* ... existing styles ... */
+
+  /* Adjust the padding and font size on smaller screens */
+  @media only screen and (max-width: 768px) {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
